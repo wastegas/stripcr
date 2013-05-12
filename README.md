@@ -1,4 +1,4 @@
 stripcr
 =======
 
-Convert Windows file to Unix
+Convert Windows text file to Unix
