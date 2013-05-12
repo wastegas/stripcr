@@ -47,9 +47,6 @@ int main(int argc, char** argv)
 			ofs << '\n';
 		}
 		
-		ofs.close();
-		ifs.close();
-		
 		if(remove(argv[1]))
 		{
 			std::cerr << "Failed to delete file" << std::endl;
