@@ -1,11 +1,24 @@
 #include <iostream>
 #include <fstream>
 
+void usage()
+{
+	std::cout << "Usage: stripcr <input file>" << std::endl;
+}
+
 int main(int argc, char** argv)
 {
 	if (argc < 2)
 	{
-		std::cerr << "Usage: stripcr <input file>" << std::endl;
+		std::cerr << "To few arguments." << std::endl;
+		usage();
+		return -1;
+	}
+
+	if (argc > 2)
+	{
+		std::cerr << "To many arguments." << std::endl;
+		usage();
 		return -1;
 	}
 	
