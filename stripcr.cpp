@@ -8,20 +8,13 @@ void usage()
 
 int main(int argc, char** argv)
 {
-	if (argc < 2)
+	if (argc != 2)
 	{
-		std::cerr << "To few arguments." << std::endl;
+		std::cerr << "Invalid arguments." << std::endl;
 		usage();
 		return -1;
 	}
 
-	if (argc > 2)
-	{
-		std::cerr << "To many arguments." << std::endl;
-		usage();
-		return -1;
-	}
-	
 	std::ifstream ifs(argv[1] , std::ios::binary);
 	
 	if(!ifs.is_open())
